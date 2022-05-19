@@ -1,0 +1,21 @@
+{# an exploration of jinja templating! #} {# This is a Jinja comment #}
+
+{#Jinja allows us to seamlessly blend html code with Pythonic statements and the values of python variables #}
+{#Jinja comments: bounded by curly brackets and octothorps/pound signs/hashtage#}
+{#Jinja statements: Python code -> for loops/conditionals bound by curly brackets with percent signs {%%} #}
+{#Jinja expressions: Python values -> variables, function calls -> print out the value to the html -> double curly brackets {{}}#}
+
+{% if True %}
+    {# above is a jinja conditional statement#}
+    {# just like python, a jinja conditional statement starts a new code block#}
+    {#in Jinja, because we're actually writing in an html file, we must manually end the code block#}
+{% elif True %}
+    {# Jinja conditional can also have elifs#}
+{% endif %}
+
+{% for i in range(5) %}
+    {# the jinja for loop will repeat the code inside of it adding the reult to the template#}
+    {#A nested for loop would look the same as in Python. You would need to manually end both#}
+    <h1 id="{{ i }}">Foxes</h1>
+    {#This for loop is ended with the expression below#}
+{% endfor%}
